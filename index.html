@@ -5,31 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="formulario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Formulário</title>
 </head>
 <body>
-    <form class="formulario" methord="post">
-        <fieldset><legend>Formulário de Freelancer</legend>
+    <form id="myForm" class="formulario" methord="post">
+        <fieldset><legend style="color:black; font-size: 17px;">Formulário de Freelancer</legend>
             <div class="field">
-                <label>Nome</label><span class="aster">*</span>
+                <label style="color:black; font-size: 15px;" >Nome</label><span class="aster">*</span>
                 <input type="text" name="nome" id="nome" class="centro" placeholder="Insira seu nome " required>
             </div>
             <div class="field">
-                <label>Sobrenome</label><span class="aster">*</span>
+                <label style="color:black; font-size: 15px;">Sobrenome</label><span class="aster">*</span>
                 <input type="text" name="sobrenome" id="sobrenome" class="centro" placeholder="Insira seu sobrenome" required>
             </div>
             <div class="field">
-                <label>Telefone</label><span class="aster">*</span>
+                <label style="color:black; font-size: 15px;">Telefone</label><span class="aster">*</span>
                 <input type="text" name="telefone" id="telefone" class="centro" placeholder="(99)99999-9999" required>
             </div>
             
             <div class="field">
-            <label>Email</label><span class="aster">*</span>
+            <label style="color:black; font-size: 15px;">Email</label><span class="aster">*</span>
             <input type="email" name="email" id="email" class="centro" placeholder="Insira seu e-mail" required>
         </div>
             
-        <div>
-            <label>Língua</label>
+        <div class="field">
+            <label style="color:black; font-size: 15px;">Língua</label>
             <select id="lingua">
                 <option>Português(pt-br)</option>
                 <option>Inglês</option>
@@ -39,77 +40,85 @@
         </div>
 
         <div class="field">
-            <label>Protótipo (Requisitos)</label>
-            <input type="file" name="arquivos" class="btn btn-success, centro"  accept="image/png, image/jpeg, application/pdf, application/doc, apllication/docx"  multiple />
+            <label style="color:black; font-size: 15px;">Protótipo (Requisitos)</label>
+            <input type="file" name="arquivos" class="btn, centro" id="costumers" accept="image/png, image/jpeg, application/pdf, application/doc, apllication/docx" multiple />
         </div>
     
         <div class="field">
-            <label>As linguagens que você prefere</label>
-            <select id="ling_prog" class="centro" multiple="multiple">
+            <label style="color:black; font-size: 15px;">As linguagens que você prefere</label>
+            <select id="ling_prog" multiple>
+                <option value="" disabled selected>Linguagens </option>
                 <option>Java</option>
                 <option>C</option>
                 <option>C++</option>
                 <option>PHP</option>
             </select> 
-            (Para fazer várias escolhas, mantenha a tecla CTRL pressionada)
         </div>
         
         <div class="field">
-            <label>Banco de Dados</label>
+            <label style="color:black; font-size: 15px;">Banco de Dados</label>
             <label>
-                <input type="radio" name="linguagem"  value="mysql">MySQL
+                <input type="radio" name="linguagem">
+                <span>MySQL</span>
             </label>
             <b>|</b>
             <label >
-                <input type="radio" name="linguagem"  value="postresql">Postgresql
+                <input type="radio" name="linguagem">
+                <span>Postgresql</span>
             </label>
             <b>|</b>
             <label >
-                <input type="radio" name="linguagem"  value="mongodb">MongoDB
+                <input type="radio" name="linguagem">
+                <span>MongoDB</span>
             </label>
             <b>|</b>
             <label >
-                <input type="radio" name="linguagem"  value="n/a">N/A
+                <input type="radio" name="linguagem">
+                <span>N/A</span>
             </label>
             <b>|</b>
             <label >
-                <input type="radio" name="linguagem"  value="outra">Outra
+                <input type="radio" name="linguagem">
+                <span>Outra</span>
             </label>
         </div>
         
         <div class="field">
-            <label>Turno para Reuniões</label><span class="aster">*</span>
+            <label style="color:black; font-size: 15px;">Turno para Reuniões</label><span class="aster">*</span>
             <label>
-                <input type="radio" name="turno" id="manha" required>Manhã
+                <input type="radio" name="turno" id="manha" required>
+                <span>Manhã</span>
             </label>
             <b>|</b>
             <label >
-                <input type="radio" name="turno" id="tarde" required>Tarde
+                <input type="radio" name="turno" id="tarde" required>
+                <span>Tarde</span>
             </label>
             <b>|</b>
             <label >
-                <input type="radio" name="turno" id="noite" required>Noite
+                <input type="radio" name="turno" id="noite" required>
+                <span>Noite</span>
             </label>
         </div>
 
         <div class="field">
-            <label>Horário Sugerido</label>
+            <label style="color:black; font-size: 15px;">Horário Sugerido</label>
             <input type="time" name="usr_horario">
         </div>
 
         <div class="field">
-            <label>Data Prevista Entrega<label><span class="aster">*</span>
-            <input type="date" name="prev_">
+            <label style="color:black; font-size: 15px;">Data Prevista Entrega<label><span class="aster">*</span>
+            <input type="date" name="prev_" required>
         </div>
         
         <div class="field">
             <br>
-            <label>Mensagem</label><span class="aster">*</span>
+            <label style="color:black; font-size: 15px;">Mensagem</label><span class="aster">*</span>
             <textarea row="6" style="width:40em" id="mensagem" class="centro" name="mensagem" placeholder="Insira o que deseja" required></textarea>
         </div>
 
             <div>
-                <input type="submit" value="Enviar">          
+                <input type="submit" value="Enviar">
                 <input type="reset" value="Limpar">
             </div>
             <footer id="footer" style='text-align:right' class="field">
@@ -119,5 +128,13 @@
             </footer>
         </fieldset>
     </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var sel = document.querySelectorAll('select');
+        M.FormSelect.init(sel)
+        });
+    </script>
 </body>
 </html>
